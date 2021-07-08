@@ -1,4 +1,4 @@
 oldReceiveMessage2=receiveMessage2;
 oldSendMessage=sendMessage;
-receiveMessage2 = function(a){ oldReceiveMessage2(a); if(!a.startsWith("\/U22^") && !a.startsWith("CUELIST") && !a.startsWith("SNAPSHOTLIST") && !a.startsWith("RTA^")) console.log("<< "+a);}
+receiveMessage2 = function(a){ oldReceiveMessage2(a); if(!a.startsWith("\/U22^") && !a.startsWith("VU2^") && !a.startsWith("CUELIST") && !a.startsWith("SNAPSHOTLIST") && !a.startsWith("RTA^")) console.log("<< "+a);}
 sendMessage = function(a){ if(!a.startsWith("CUELIST") && !a.startsWith("ALIVE") && !a.startsWith("SNAPSHOTLIST")) console.log(">> "+a); return oldSendMessage(a);}
