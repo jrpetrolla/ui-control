@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Painel Ui24</title>
+    </head>
+    <style>
+        * { box-sizing: border-box; }
+        body{ margin: 0; padding: 0; background-color: #3A393A; }
+		input[type=button] { width: 10em;  height: 2em; }
+    </style>
+    <body>
+		<input id="1" type="button" value="UnMute Master" /><input id="2" type="button" value="Mute Master" /><br/>
+		<input id="3" type="button" value="UnMute Aux3" /><input id="4" type="button" value="Mute Aux3" />
+    </body>
+	<script>
+		inputs = document.getElementsByTagName('input');
+		for (index = 0; index < inputs.length; ++index) document.getElementById(inputs[index].id).onclick = run;
+		function run() { var xmlhttp = window.XMLHttpRequest ? new XMLHttpRequest() : new ActiveXObject("Microsoft.XMLHTTP"); xmlhttp.open("GET", "http://127.0.0.1:8742/"+this.id, true); xmlhttp.send(); }
+	</script>
+</html>
